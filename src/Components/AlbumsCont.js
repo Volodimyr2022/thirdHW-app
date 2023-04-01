@@ -7,10 +7,15 @@ const AlbumsCont = () => {
   return (
   <div>
     <DataContext.Consumer>
-        {(context) => {
-            console.log(context)
-        }
-        }
+      {({albums}) => {
+        albums.map(({userId, id, title}) => {
+          return (
+          <div key={id}>
+            {userId} {id} {title}
+          </div>
+        )
+        })
+      }}
     </DataContext.Consumer>
   </div>
   );
