@@ -9,14 +9,15 @@ class Ref extends React.Component {
     componentDidMount(){
         console.log(this.squareRef.current)
 
-        // this.squareRef.current.setTimeout(() => {
-            
-        // ВОТ ЗДЕСЬ ДОЛЖЕН БЫТЬ КОД КОТОРЫЙ ДОБАВЛЯЕТ СТИЛЬ transform: translate(200px)
-        //  В КЛАСС square? 
+        setTimeout(() => {
 
-        // }, 2000);
+        // this.squareRef.current.style.transform="translate(200px)"
+        this.squareRef.current.classList.add("move")
+        
+        }, 2000);
     }
-  
+
+   
     render(){
     return (
         <div 
