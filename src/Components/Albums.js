@@ -19,7 +19,7 @@ class Albums extends React.Component {
       })
       .then((result) => {
           console.log(result)
-          this.setState({albums:result})
+          this.setState({albums: result})
       })
       .catch((err) => {
           console.log(err)

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import { DataContext } from "./DataContext";
 
 const HookAlbums = () => {
 
@@ -13,16 +14,24 @@ const HookAlbums = () => {
         })
         .then((result) => {
             console.log(result)
-            setAlbums({albums:result})
+            setAlbums(result)
         })
         .catch((err) => {
             console.log(err)
         });  
-    })
+    }, [])
 
     return (
         <div>
-            
+            {
+            (albums.map(({userId, id, title}) => {
+                return (
+                    <div key={id}>
+                        {userId} {id} {title}
+                    </div>
+                )
+            }))
+            }
         </div>
     )
         

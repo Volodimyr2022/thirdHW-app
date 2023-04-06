@@ -5,19 +5,17 @@ import { DataContext } from './DataContext';
 const AlbumsCont = () => {
   
   return (
-  <div>
     <DataContext.Consumer>
-      {({albums}) => {
-        albums.map(({userId, id, title}) => {
-          return (
+     {
+      context => {
+        console.log(context)
+      return context.map(({userId, id, title}) => 
           <div key={id}>
             {userId} {id} {title}
           </div>
-        )
-        })
+        ) 
       }}
     </DataContext.Consumer>
-  </div>
   );
 
 }

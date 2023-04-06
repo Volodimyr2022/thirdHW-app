@@ -27,7 +27,7 @@ export class DataProvider extends React.Component {
      
      render() {
         return (
-            <DataContext.Provider value={ {albums:this.state.albums} }>
+            <DataContext.Provider value={ this.state.albums } >
                 {this.props.children}
             </DataContext.Provider>
         ); 
