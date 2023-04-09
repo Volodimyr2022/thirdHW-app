@@ -4,6 +4,7 @@ import AlbumsCont from "./Components/AlbumsCont"
 import HookAlbums from "./Components/HookAlbums";
 import HookAlbumsCont from "./Components/HookAlbumsCont";
 import Ref from "./Components/Ref";
+import VideoPlayer from "./Components/Video";
 
 class App extends React.Component {
 
@@ -14,7 +15,8 @@ class App extends React.Component {
                 {/* <AlbumsCont /> */}
                 {/* <HookAlbums /> */}
                 {/* <HookAlbumsCont /> */}
-                <Ref />
+                {/* <Ref /> */}
+                <VideoPlayer />
             </div>
         )
     }

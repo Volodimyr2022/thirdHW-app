@@ -3,7 +3,7 @@ import "../app.css"
 
 class Ref extends React.Component {
   
-    squareRef = React.createRef("");
+    squareRef = React.createRef();
   
     
     componentDidMount(){
@@ -22,8 +22,8 @@ class Ref extends React.Component {
     return (
         <div 
             className="square"
-            ref={this.squareRef} 
-        > </div>
+            ref={this.squareRef} />
+         
     )}
 }
 
